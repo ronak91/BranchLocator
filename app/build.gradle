@@ -1,19 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 26
     defaultConfig {
         applicationId "com.branchlocator.branchlocator"
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 26
         versionCode 1
+        multiDexEnabled true
         versionName "1.0"
-        resConfigs "auto"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            multiDexEnabled true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -24,17 +23,21 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleCompatible
-    compile 'com.android.support:appcompat-v7:27.1.0'
     testImplementation 'junit:junit:4.12'
+    //noinspection GradleCompatible
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Used Dependancy
-    compile 'com.android.support:design:27.0.2'
-    compile 'com.android.support:recyclerview-v7:27.+'
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 
-    compile 'org.apache.commons:commons-lang3:3.4'
-    compile 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
-    compile 'com.android.support:multidex:1.0.2'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+    //tp loaad http json
+
+    // Include the Google Maps Android API from Google Play Services.
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
 }
