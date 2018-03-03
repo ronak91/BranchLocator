@@ -3,4 +3,15 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <!--Project Colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="color_light_white">#f2f2f2</color>
+    <color name="tabinactive">#929292</color>
+    <color name="tabactive">#3F51B5</color>
+    <color name="light_gray">#8f8f94</color>
+
 </resources>
